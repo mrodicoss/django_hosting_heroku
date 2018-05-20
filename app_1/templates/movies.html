@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for movie in data %}
+<div class="container cln-xs-12 cln-sm-8 cln-md-6 cln-lg-4" >
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{movie.poster.large}}" alt="No poster!!!">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <p class="card-text">{{movie.release_date}}</p>
+    <a href="{{movie.url.url}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+
+{% endfor %}
+{% endblock %}
